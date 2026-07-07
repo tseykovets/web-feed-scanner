@@ -1,0 +1,14 @@
+{
+  "extension_name": {
+    "message": "Сканер веб-каналов",
+    "description": "Name of the extension. The maximum length is 45 characters."
+  },
+  "extension_description": {
+    "message": "Показывает объявленные RSS/Atom-каналы на текущей странице в контекстном меню, вызываемом правой кнопкой мыши.",
+    "description": "A short description of the extension. The maximum length is 132 characters."
+  },
+  "developer_name": {
+    "message": "Никита Цейковец",
+    "description": "The name of the extension's developer. Leave it untranslated if you are unsure of the correct spelling in the localization language."
+  }
+}

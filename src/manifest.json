@@ -1,0 +1,15 @@
+{
+  "name": "__MSG_extension_name__",
+  "short_name": "Feed Scanner",
+  "version": "0.1",
+  "version_name": "0.1 alpha",
+  "description": "__MSG_extension_description__",
+  "author": "__MSG_developer_name__",
+  "homepage_url": "https://github.com/tseykovets/web-feed-scanner",
+  "developer": {
+    "name": "__MSG_developer_name__",
+    "url": "https://github.com/tseykovets/web-feed-scanner"
+  },
+  "default_locale": "en",
+  "manifest_version": 3
+}
