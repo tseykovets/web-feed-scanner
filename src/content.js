@@ -13,7 +13,10 @@ function collectData() {
   // MIME dictionary: human-friendly name of the type
   const typeMap = {
     'application/rss+xml': 'RSS',
-    'application/atom+xml': 'Atom'
+    'application/atom+xml': 'Atom',
+    'application/feed+json': 'JSON Feed',
+    'application/json': 'JSON Feed',
+    'application/rdf+xml': 'RDF/XML'
   };
 
   links.forEach(link => {
