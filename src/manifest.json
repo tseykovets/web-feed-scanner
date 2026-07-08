@@ -6,9 +6,26 @@
   "description": "__MSG_extension_description__",
   "author": "__MSG_developer_name__",
   "homepage_url": "https://github.com/tseykovets/web-feed-scanner",
-  "developer": {
-    "name": "__MSG_developer_name__",
-    "url": "https://github.com/tseykovets/web-feed-scanner"
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "__MSG_show_page_feeds__"
   },
   "default_locale": "en",
   "manifest_version": 3

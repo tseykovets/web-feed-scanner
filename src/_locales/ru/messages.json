@@ -4,11 +4,99 @@
     "description": "Name of the extension. The maximum length is 45 characters."
   },
   "extension_description": {
-    "message": "Показывает объявленные RSS/Atom-каналы на текущей странице в контекстном меню, вызываемом правой кнопкой мыши.",
+    "message": "Показывает объявленные веб-каналы у текущей страницы по нажатию на кнопку на панели инструментов или на пункт контекстного меню.",
     "description": "A short description of the extension. The maximum length is 132 characters."
   },
   "developer_name": {
     "message": "Никита Цейковец",
     "description": "The name of the extension's developer. Leave it untranslated if you are unsure of the correct spelling in the localization language."
+  },
+  "show_page_feeds": {
+    "message": "Показать каналы страницы…",
+    "description": "The label for an action button or a context menu."
+  },
+  "error_title": {
+    "message": "Ошибка",
+    "description": "The title of the error messeges."
+  },
+  "tab_closed_message": {
+    "message": "Вкладка уже закрыта.",
+    "description": "The message text when requesting feeds for a page in an already closed tab."
+  },
+  "tab_closed_explanation": {
+    "message": "Не удалось получить список каналов, так как вкладка страницы не найдена.",
+    "description": "The message explanation when requesting feeds for a page in an already closed tab."
+  },
+  "no_connection_message": {
+    "message": "Не удалось связаться со страницей.",
+    "description": "The message text when there is an error connecting to a tab."
+  },
+  "no_connection_explanation": {
+    "message": "Обновите страницу и попробуйте ещё раз.",
+    "description": "The message explanation when there is an error connecting to a tab."
+  },
+  "no_feeds_title": {
+    "message": "Нет каналов у $PAGE$",
+    "description": "The message title when there are no feeds on the page.",
+    "placeholders": {
+      "page": {
+        "content": "$1",
+        "example": "Web Page"
+      }
+    }
+  },
+  "no_feeds_message": {
+    "message": "Каналов у этой страницы не найдено.",
+    "description": "The message text when there are no feeds on the page."
+  },
+  "no_feeds_explanation": {
+    "message": "Каналы либо отсутствуют, либо ссылки на них не добавлены в машиночитаемом виде.",
+    "description": "The message explanation when there are no feeds on the page."
+  },
+  "there_are_feeds_title": {
+    "message": "$NUMBER$ канал(ов) у $PAGE$",
+    "description": "The message title when feeds are found.",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "3"
+      },
+      "page": {
+        "content": "$2",
+        "example": "Web Page"
+      }
+    }
+  },
+  "type": {
+    "message": "Тип",
+    "description": "The header of the table of found feeds."
+  },
+  "title": {
+    "message": "Название",
+    "description": "The header of the table of found feeds."
+  },
+  "action": {
+    "message": "Действие",
+    "description": "The header of the table of found feeds."
+  },
+  "copy_url": {
+    "message": "Скопировать URL",
+    "description": "The label for a copy URL button in the table of found feeds."
+  },
+  "copied": {
+    "message": "Скопировано!",
+    "description": "The label for a copy URL button in the table of found feeds after copying."
+  },
+  "failed_copying": {
+    "message": "Не удалось скопировать в буфер обмена. Попробуйте скопировать вручную.",
+    "description": "The message text when copying a URL to the clipboard fails."
+  },
+  "critical_error_message": {
+    "message": "Произошла критическая ошибка.",
+    "description": "The message text when a critical error occurs."
+  },
+  "critical_error_explanation": {
+    "message": "Проверьте консоль (F12) для получения дополнительной информации.",
+    "description": "The message explanation when a critical error occurs."
   }
 }

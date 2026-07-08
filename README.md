@@ -1,6 +1,6 @@
 # Web Feed Scanner
 
-A browser extension (WebExtensions Manifest V3) that detects declared RSS and Atom web feeds on the currently loaded page. It parses `<link>` tags and exposes found feeds in the context menu (right-click) for quick access.
+A browser extension (WebExtensions Manifest V3) that detects declared web feeds for the currently loaded page. It parses `<link>` tags and exposes found feeds on a separate tab, which opens when you click on a button on the toolbar or an item in the context menu.
 
 ## Install as Unpacked Extension
 

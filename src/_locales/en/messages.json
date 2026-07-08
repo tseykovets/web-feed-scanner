@@ -4,11 +4,99 @@
     "description": "Name of the extension. The maximum length is 45 characters."
   },
   "extension_description": {
-    "message": "Shows declared RSS/Atom feeds on the current page via the right-click context menu.",
+    "message": "Shows declared web feeds for the current page by pressing a button on the toolbar or a context menu item.",
     "description": "A short description of the extension. The maximum length is 132 characters."
   },
   "developer_name": {
     "message": "Nikita Tseykovets",
     "description": "The name of the extension's developer. Leave it untranslated if you are unsure of the correct spelling in the localization language."
+  },
+  "show_page_feeds": {
+    "message": "Show page feeds…",
+    "description": "The label for an action button or a context menu."
+  },
+  "error_title": {
+    "message": "Error",
+    "description": "The title of the error messeges."
+  },
+  "tab_closed_message": {
+    "message": "The tab is already closed.",
+    "description": "The message text when requesting feeds for a page in an already closed tab."
+  },
+  "tab_closed_explanation": {
+    "message": "Unable to get feed list because page tab not found.",
+    "description": "The message explanation when requesting feeds for a page in an already closed tab."
+  },
+  "no_connection_message": {
+    "message": "Unable to contact the page.",
+    "description": "The message text when there is an error connecting to a tab."
+  },
+  "no_connection_explanation": {
+    "message": "Please refresh the page and try again.",
+    "description": "The message explanation when there is an error connecting to a tab."
+  },
+  "no_feeds_title": {
+    "message": "No Feeds for $PAGE$",
+    "description": "The message title when there are no feeds on the page.",
+    "placeholders": {
+      "page": {
+        "content": "$1",
+        "example": "Web Page"
+      }
+    }
+  },
+  "no_feeds_message": {
+    "message": "No feeds found for this page.",
+    "description": "The message text when there are no feeds on the page."
+  },
+  "no_feeds_explanation": {
+    "message": "The feeds are either missing or the links to them are not added in machine-readable form.",
+    "description": "The message explanation when there are no feeds on the page."
+  },
+  "there_are_feeds_title": {
+    "message": "$NUMBER$ feed(s) for $PAGE$",
+    "description": "The message title when feeds are found.",
+    "placeholders": {
+      "number": {
+        "content": "$1",
+        "example": "3"
+      },
+      "page": {
+        "content": "$2",
+        "example": "Web Page"
+      }
+    }
+  },
+  "type": {
+    "message": "Type",
+    "description": "The header of the table of found feeds."
+  },
+  "title": {
+    "message": "Title",
+    "description": "The header of the table of found feeds."
+  },
+  "action": {
+    "message": "Action",
+    "description": "The header of the table of found feeds."
+  },
+  "copy_url": {
+    "message": "Copy URL",
+    "description": "The label for a copy URL button in the table of found feeds."
+  },
+  "copied": {
+    "message": "Copied!",
+    "description": "The label for a copy URL button in the table of found feeds after copying."
+  },
+  "failed_copying": {
+    "message": "Failed to copy to clipboard. Try copying manually.",
+    "description": "The message text when copying a URL to the clipboard fails."
+  },
+  "critical_error_message": {
+    "message": "A critical error has occurred.",
+    "description": "The message text when a critical error occurs."
+  },
+  "critical_error_explanation": {
+    "message": "Check console (F12) for details.",
+    "description": "The message explanation when a critical error occurs."
   }
 }
