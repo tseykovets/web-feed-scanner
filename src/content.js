@@ -53,7 +53,7 @@ function collectData() {
   return { feeds, pageLang };
 }
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === 'get_feeds') {
     sendResponse(collectData());
   }

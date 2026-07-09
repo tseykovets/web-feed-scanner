@@ -8,18 +8,18 @@ const menuId = 'show_page_feeds';
 
 function createContextMenu() {
   try {
-    chrome.contextMenus.removeAll(() => {
-      if (chrome.runtime.lastError) {
-        console.error('[Web Feed Scanner] Menu clearing error:', chrome.runtime.lastError);
+    browser.contextMenus.removeAll(() => {
+      if (browser.runtime.lastError) {
+        console.error('[Web Feed Scanner] Menu clearing error:', browser.runtime.lastError);
       }
 
-      chrome.contextMenus.create({
+      browser.contextMenus.create({
         id: menuId,
-        title: chrome.i18n.getMessage('show_page_feeds'),
+        title: browser.i18n.getMessage('show_page_feeds'),
         contexts: ['all']
       }, () => {
-        if (chrome.runtime.lastError) {
-          console.error('[Web Feed Scanner] Menu creating error:', chrome.runtime.lastError);
+        if (browser.runtime.lastError) {
+          console.error('[Web Feed Scanner] Menu creating error:', browser.runtime.lastError);
         }
       });
     });
@@ -31,24 +31,24 @@ function createContextMenu() {
 createContextMenu();
 
 // Toolbar button handler
-chrome.action.onClicked.addListener(async (tab) => {
+browser.action.onClicked.addListener(async (tab) => {
   await showPageFeeds(tab);
 });
 
 // Context menu handler
-chrome.contextMenus.onClicked.addListener(async (info, tab) => {
+browser.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId === menuId) {
     await showPageFeeds(tab);
   }
 });
 
 async function showPageFeeds(tab) {
-  const url = `${chrome.runtime.getURL('popup.html')}?tabId=${tab.id}`;
+  const url = `${browser.runtime.getURL('popup.html')}?tabId=${tab.id}`;
 
   try {
     // Open new tab before requesting data
-    const newTab = await chrome.tabs.create({ url: url, active: true });
-    const response = await chrome.tabs.sendMessage(tab.id, { action: 'get_feeds' });
+    const newTab = await browser.tabs.create({ url: url, active: true });
+    const response = await browser.tabs.sendMessage(tab.id, { action: 'get_feeds' });
     if (!response || !response.feeds) {
       console.warn('[Web Feed Scanner] Response received, but data missing or incorrect.');
       return;
