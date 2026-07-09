@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page with Feeds</title>
+  <link rel="alternate" type="application/rss+xml" title="Feed in RSS format" href="https://example.com/rss">
+  <link rel="alternate" type="application/atom+xml" title="Feed in Atom format" href="https://example.com/atom">
+  <link rel="alternate" type="application/feed+json" title="Feed in JSON Feed format (application/feed+json)" href="https://example.com/json">
+  <link rel="alternate" type="application/json" title="Feed in JSON Feed format (application/json)" href="https://example.com/json">
+  <link rel="alternate" type="application/rdf+xml" title="Feed in RDF/XML format" href="https://example.com/rdf">
+</head>
+<body>
+  <h1>Page with Feeds</h1>
+  <p>Verify the behavior when scanning a page that has declared web feeds.</p>
+  <h2>Preconditions</h2>
+  <ul>
+    <li>The Web Feed Scanner browser extension is installed.</li>
+    <li>This page is open in the browser.</li>
+  </ul>
+  <h2>Steps</h2>
+  <ol>
+    <li>Open the context menu.</li>
+    <li>Press the "Show page feeds" item.</li>
+  </ol>
+  <h2>Expected Result</h2>
+  <ul>
+    <li>A new tab opens displaying a message indicating that there are 5 feeds for this page:
+      <ul>
+        <li>Feed in RSS format</li>
+        <li>Feed in Atom format</li>
+        <li>Feed in JSON Feed format (application/feed+json)</li>
+        <li>Feed in JSON Feed format (application/json)</li>
+        <li>Feed in RDF/XML format</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
