@@ -1,0 +1,36 @@
+{
+  "name": "web-feed-scanner",
+  "version": "0.1.0",
+  "description": "A browser extension that detects declared web feeds for the currently loaded page.",
+  "keywords": [
+    "browser-extension",
+    "webextension",
+    "web-feed",
+    "rss",
+    "atom",
+    "json-feed",
+    "rdf",
+    "rdf/xml"
+  ],
+  "homepage": "https://github.com/tseykovets/web-feed-scanner#readme",
+  "bugs": {
+    "url": "https://github.com/tseykovets/web-feed-scanner/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tseykovets/web-feed-scanner.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Nikita Tseykovets",
+    "email": "tseikovets@rambler.ru",
+    "url": "https://github.com/tseykovets"
+  },
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
