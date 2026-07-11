@@ -6,29 +6,27 @@
 
 const menuId = 'show_page_feeds';
 
-function createContextMenu() {
+async function createContextMenu() {
   try {
-    browser.contextMenus.removeAll(() => {
-      if (browser.runtime.lastError) {
-        console.error('[Web Feed Scanner] Menu clearing error:', browser.runtime.lastError);
-      }
+    await browser.contextMenus.removeAll();
+  } catch (err) {
+    console.warn('[Web Feed Scanner] Could not clear context menus (may be harmless):', err);
+  }
 
-      browser.contextMenus.create({
-        id: menuId,
-        title: browser.i18n.getMessage('show_page_feeds'),
-        contexts: ['all']
-      }, () => {
-        if (browser.runtime.lastError) {
-          console.error('[Web Feed Scanner] Menu creating error:', browser.runtime.lastError);
-        }
-      });
+  try {
+    await browser.contextMenus.create({
+      id: menuId,
+      title: browser.i18n.getMessage('show_page_feeds'),
+      contexts: ['all'],
     });
   } catch (err) {
-    console.error('[Web Feed Scanner] Critical error when initializing the menu:', err);
+    console.error('[Web Feed Scanner] Failed to create context menu:', err);
   }
 }
 
-createContextMenu();
+createContextMenu().catch(err => {
+  console.error('[Web Feed Scanner] Critical error initializing context menu:', err);
+});
 
 // Toolbar button handler
 browser.action.onClicked.addListener(async (tab) => {
@@ -46,14 +44,13 @@ async function showPageFeeds(tab) {
   const url = `${browser.runtime.getURL('popup.html')}?tabId=${tab.id}`;
 
   try {
-    // Open new tab before requesting data
-    const newTab = await browser.tabs.create({ url: url, active: true });
+    const newTab = await browser.tabs.create({ url, active: true });
     const response = await browser.tabs.sendMessage(tab.id, { action: 'get_feeds' });
+
     if (!response || !response.feeds) {
       console.warn('[Web Feed Scanner] Response received, but data missing or incorrect.');
-      return;
     }
   } catch (err) {
-    console.error('[Web Feed Scanner] Error in the showPageFeeds() function:', err);
+    console.error('[Web Feed Scanner] Error in showPageFeeds() function:', err);
   }
 }
