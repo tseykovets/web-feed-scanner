@@ -31,6 +31,15 @@
     "test": "tests"
   },
   "scripts": {
+    "build:chromium-based": "extension build --browser=chromium-based --zip --zip-filename=wfs4chromium",
+    "build:gecko-based": "extension build --browser=gecko-based --zip --zip-filename=wfs4gecko",
+    "build": "extension build",
+    "dev": "extension dev",
+    "preview": "extension preview",
+    "start": "extension start",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "extension": "^4.0.6"
   }
 }
