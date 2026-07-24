@@ -16,7 +16,8 @@ function collectData() {
     'application/atom+xml': 'Atom',
     'application/feed+json': 'JSON Feed',
     'application/json': 'JSON Feed',
-    'application/rdf+xml': 'RDF/XML'
+    'application/rdf+xml': 'RDF/XML',
+    'application/x-cdf': 'CDF'
   };
 
   links.forEach(link => {
